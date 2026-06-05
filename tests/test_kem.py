@@ -4,7 +4,7 @@ from kem_hybrid_demo import hybrid_encrypt, hybrid_decrypt
 import oqs
 
 def test_hybrid():
-    with oqs.KeyEncapsulation("Kyber-768") as kem:
+    with oqs.KeyEncapsulation("ML-KEM-768") as kem:
         pub = kem.generate_keypair()
         priv = kem.export_secret_key()
     msg = b"test"
