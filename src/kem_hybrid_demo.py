@@ -1,7 +1,3 @@
-
-### 4. Archivo `src/kem_hybrid_demo.py`
-
-```python
 #!/usr/bin/env python3
 """
 Hybrid Encryption: ML-KEM-768 (Kyber) + AES-256-GCM
