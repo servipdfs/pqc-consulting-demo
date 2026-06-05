@@ -11,8 +11,8 @@ def generate_keypair():
     return pub, priv
 
 def sign(priv, msg):
-    with oqs.Signature("ML-DSA-65") as s:
-        s.import_secret_key(priv)
+    # Le pasamos la clave privada como parámetro (secret_key=priv)
+    with oqs.Signature("ML-DSA-65", secret_key=priv) as s:
         return s.sign(msg)
 
 def verify(pub, msg, sig):
