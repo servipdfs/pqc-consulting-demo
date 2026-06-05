@@ -3,7 +3,9 @@ on: [push, pull_request]
 jobs:
   test:
     runs-on: ubuntu-latest
-    steps:
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true # Añade esta línea
+      steps:
       - uses: actions/checkout@v4
       - name: Build liboqs
         run: |
